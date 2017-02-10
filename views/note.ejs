@@ -5,18 +5,14 @@
   </head>
   <body>
     <% include ./partials/nav %>
-    <button class="btn">Add Note</button>
+    <button class="btn">Edit Note</button>
     <div id="newNote" class="hide">
       <div class="editNote">
-        <input type="text" name="title" id="title" />
-        <textarea name="description" id="description"></textarea>
+        <input type="text" name="title" id="title" value="note.title" />
+        <textarea name="description" id="description" value="note.description"></textarea>
         <button class="btn" type="button">Cancel</button>
         <button class="btn">Save</button>
       </div>
     </div>
-    <h2>Notes</h2>
-    <ul>
-      
-    </ul>
   </body>
 </html>
