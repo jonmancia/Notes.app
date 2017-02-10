@@ -6,10 +6,13 @@
   <body>
     <% include ./partials/nav %>
     <div class="container">
+      <% var url = '/notes/' + note.id %>
       <button id="editNoteButton" class="btn">Edit Note</button>
+      <form action="<%= url + '?_method=DELETE' %>" method='POST'>
+      <button class="btn">Delete</button>
+      </form>
       <div id="editNote" class="hide card-panel hoverable">
         <div class="editNote">
-          <% var url = '/notes/' + note.id %>
           <form id="edit" action=<%= url + '?_method=PUT' %> method="POST">
             <input type="text" name="title" id="title" value="<%= note.title %>" />
             <textarea name="description" id="description"><%= note.description %></textarea>

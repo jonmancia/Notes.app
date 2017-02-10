@@ -15,4 +15,8 @@ $(document).ready( function() {
   $('#editNoteButton').click( function() {
     toggleEditNoteForm();
   })
+
+  $('#cancelHide').click( function(){
+    $('#newNote').toggleClass('hide');
+  })
 });
