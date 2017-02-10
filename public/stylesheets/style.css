@@ -1,0 +1,21 @@
+.note {
+  width: 18%;
+  display: inline-block;
+}
+
+.note.card-panel {
+  padding: 0;
+}
+.noteCard {
+  padding: 0.3em 1em;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.noteTitle {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.noteDescription {
+  font-size: .9em;
+}
