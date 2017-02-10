@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Note = require('../models/song');
+var Note = require('../models/notes');
 
 router.get('/', function(req, res){
     Note.find( function(err, songs){
