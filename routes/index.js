@@ -14,7 +14,7 @@ router.post('/', function(req, res){
         description: req.body.description,
         updatedAt: Date.now()
     }).save( function(req, res){
-        res.redirect('/index');
+        res.redirect('/');
     });
 });
 
