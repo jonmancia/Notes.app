@@ -4,7 +4,7 @@ var Note = require('../models/notes');
 
 router.get('/', function(req, res){
     Note.find( function(err, notes){
-        res.render('index', { notes: notes });
+        res.render('/notes', { notes: notes });
     });
 });
 
