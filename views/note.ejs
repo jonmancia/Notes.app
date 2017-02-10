@@ -6,13 +6,17 @@
   <body>
     <% include ./partials/nav %>
     <button class="btn">Edit Note</button>
-    <div id="newNote" class="hide">
+    <div id="editNote" class="hide note">
       <div class="editNote">
         <input type="text" name="title" id="title" value="note.title" />
         <textarea name="description" id="description" value="note.description"></textarea>
-        <button class="btn" type="button">Cancel</button>
-        <button class="btn">Save</button>
+        <button id="cancelNoteEdit" class="btn" type="button">Cancel</button>
+        <button id="saveNoteEdit" class="btn">Save</button>
       </div>
+    </div>
+    <div id="showNote" class="note">
+      <div class="noteTitle">Title of Note</div>
+      <div class="noteDescription">Description of Note with a lot more text than the title</div>
     </div>
   </body>
 </html>
