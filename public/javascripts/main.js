@@ -6,4 +6,13 @@ $(document).ready( function() {
   $('#addNewNote').click( function() {
     toggleAddNoteForm();
   })
+
+  function toggleEditNoteForm() {
+    $('#editNote').toggleClass('hide');
+    $('#noteDetails').toggleClass('hide');
+  }
+
+  $('#editNoteButton').click( function() {
+    toggleEditNoteForm();
+  })
 });

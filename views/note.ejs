@@ -5,18 +5,22 @@
   </head>
   <body>
     <% include ./partials/nav %>
-    <button class="btn">Edit Note</button> 
-    <div id="editNote" class="hide note ard-panel hoverable">
+    <button id="editNoteButton" class="btn">Edit Note</button>
+    <div id="editNote" class="hide note card-panel hoverable">
       <div class="editNote">
-        <input type="text" name="title" id="title" value="note.title" />
-        <textarea name="description" id="description" value="note.description"></textarea>
-        <button id="cancelNoteEdit" class="btn" type="button">Cancel</button>
-        <button id="saveNoteEdit" class="btn">Save</button>
+        <% var url = '/notes/' + note.id %>
+        <form id="edit" action=<%= url + '?_method=PUT' %> method="POST">
+          <input type="text" name="title" id="title" value="<%= note.title %>" />
+          <textarea name="description" id="description" value="<%= note.description %>"></textarea>
+          <button id="cancelNoteEdit" class="btn" type="button">Cancel</button>
+          <button id="saveNoteEdit" class="btn">Save</button>
+        </form>
       </div>
     </div>
-    <div id="showNote" class="note">
+    <div id="noteDetails" class="note">
       <div class="noteTitle">Title of Note</div>
       <div class="noteDescription">Description of Note with a lot more text than the title</div>
     </div>
+    <script src="../javascripts/main.js" charset="utf-8"></script>
   </body>
 </html>
