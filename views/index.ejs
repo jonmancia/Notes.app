@@ -5,25 +5,30 @@
   </head>
   <body>
     <% include ./partials/nav %>
-    <button id="addNewNote" class="btn">Add Note</button>
-    <div id="newNote" class="hide">
-      <div class="editNote">
-        <input type="text" name="title" id="title" placeholder="Title" />
-        <textarea name="description" id="description" placeholder="Description"></textarea>
-        <button class="btn" type="button">Cancel</button>
-        <button class="btn">Save</button>
-      </div>
+    <div class="container">
+      <button id="addNewNote" class="btn">Add Note</button>
+      <div id="newNote" class="hide">
+        <div class="row">
+          <div class="editNote col s12 m6 l3">
+            <input type="text" name="title" id="title" placeholder="Title" />
+            <textarea name="description" id="description" placeholder="Description"></textarea>
+            <button class="btn" type="button">Cancel</button>
+            <button class="btn">Save</button>
+          </div>
+        </div>
+    <div class="row">
+      <h2>Notes</h2>
+        <ul>
+            <% notes.forEach( function(note) { %>
+            <li>
+              <a href=<%= '/' + note.id %> >
+                <%= note.title %>
+              </a>
+            </li>
+            <% }) %>
+          </ul>
     </div>
-    <h2>Notes</h2>
-    <ul>
-      <% notes.forEach( function(note) { %>
-        <li>
-          <a href=<%= '/' + note.id %> >
-            <%= note.title %>
-          </a>
-        </li>
-      <% }) %>
-    </ul>
+
     <script src="../javascripts/main.js" charset="utf-8"></script>
   </body>
 </html>
